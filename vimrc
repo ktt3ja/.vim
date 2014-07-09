@@ -57,6 +57,7 @@ set hidden
 set showcmd
 set number
 set listchars=tab:▸\ ,eol:¬
+set backspace=indent,eol,start
 
 function! TrimWhiteSpace()
     %s/\s\+$//e
