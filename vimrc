@@ -59,6 +59,11 @@ set number
 set listchars=tab:▸\ ,eol:¬
 set backspace=indent,eol,start
 
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 function! TrimWhiteSpace()
     %s/\s\+$//e
 endfunction
