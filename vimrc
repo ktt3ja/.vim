@@ -32,7 +32,8 @@ set softtabstop=4
 set shiftround
 set autoindent
 
-autocmd FileType make set noexpandtab
+autocmd FileType make setlocal noexpandtab
+autocmd FileType html,javascript,ruby setlocal ts=2 sts=2 sw=2 expandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => No backup files
@@ -49,6 +50,12 @@ set smartcase
 set incsearch
 set hlsearch
 set showmatch
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Column display
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ruler
+set colorcolumn=81
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Miscellaneous
@@ -71,6 +78,6 @@ autocmd BufWritePre * call TrimWhiteSpace()
 
 " source the vimrc file after saving it
 augroup reload_vimrc
-	autocmd!
-	autocmd BufWritePost $MYVIMRC source %
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source %
 augroup END
